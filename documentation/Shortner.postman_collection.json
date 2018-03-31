@@ -1,0 +1,1560 @@
+{
+	"info": {
+		"name": "Shortner",
+		"_postman_id": "d0276e80-37b6-dda3-393c-7e9d79f47996",
+		"description": "Shortner is a url shortening service. It is free to use. You can find out more about shortner at http://www.shortner.net",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "4.0",
+			"description": "",
+			"item": [
+				{
+					"name": "Create link",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[],\n  \"description\":\"Full of nerds\"\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/link",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"link"
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "72e73e71-38da-4056-b468-a9bcb793a833",
+							"name": "Response of a link create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[],\n  \"description\":\"Full of nerds\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:43:11 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": "The mime type of this content"
+								}
+							],
+							"cookie": [],
+							"responseTime": 188,
+							"body": "{\n    \"success\": true,\n    \"link\": {\n        \"shortCode\": \"i\",\n        \"hits\": 0,\n        \"warnings\": [],\n        \"options\": [],\n        \"description\": \"Full of nerds\",\n        \"type\": \"link\",\n        \"link\": \"http:\\/\\/testo.local\\/i\",\n        \"url\": \"http:\\/\\/www.ognetworks.tv\",\n        \"detailLink\": \"http:\\/my\\/link\\/i\",\n        \"stats\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create link with NSFW warning",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\":\"http://www.youtube.com\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"Youtube totally nsfw\"\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/link",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"link"
+							]
+						},
+						"description": "Create a link with a NSFW warning"
+					},
+					"response": [
+						{
+							"id": "cf44f890-fcb1-43d8-ab22-071c67ab694e",
+							"name": "Response of a link create with nsfw warning",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.youtube.com\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"Youtube totally nsfw\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:43:35 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "175",
+							"body": "{\n    \"success\": true,\n    \"link\": {\n        \"shortCode\": \"j\",\n        \"hits\": 0,\n        \"warnings\": [\n            \"nsfw\"\n        ],\n        \"options\": [],\n        \"description\": \"Youtube totally nsfw\",\n        \"type\": \"link\",\n        \"link\": \"http:\\/\\/testo.local\\/j\",\n        \"url\": \"http:\\/\\/www.youtube.com\",\n        \"detailLink\": \"http:\\/my\\/link\\/j\",\n        \"stats\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create collection",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\":\"http://polymatic.media/podcast\",\n  \"warnings\":[],\n  \"description\":\"A collection for episode 999\",\n  \"type\":\"collection\",\n  \"custom\":\"show999\"\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/link",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"link"
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "c7373dc9-ea37-449e-adc1-253b66cf2591",
+							"name": "Response for a create collection with a custom link",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://polymatic.media/podcast\",\n  \"warnings\":[],\n  \"description\":\"A collection for episode 999\",\n  \"type\":\"collection\",\n  \"custom\":\"show999\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:43:59 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "176",
+							"body": "{\n    \"success\": true,\n    \"link\": {\n        \"shortCode\": \"k\",\n        \"hits\": 0,\n        \"warnings\": [],\n        \"options\": [],\n        \"description\": \"A collection for episode 999\",\n        \"realShortCode\": \"k\",\n        \"customCode\": \"show999\",\n        \"type\": \"collection\",\n        \"link\": \"http:\\/\\/testo.local\\/k\",\n        \"customLink\": \"http:\\/\\/testo.local\\/show999\",\n        \"url\": \"http:\\/\\/polymatic.media\\/podcast\",\n        \"detailLink\": \"http:\\/my\\/collection\\/k\",\n        \"links\": [],\n        \"stats\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create collection for podcast",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\":\"http://www.polymatic.media\",\n  \"warnings\":[],\n  \"description\":\"\",\n  \"type\":\"collection\",\n  \"custom\":\"show33\",\n  \"podcast\":\"polymaticast\"\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/link",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"link"
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "8ac8ab68-662b-4f2d-b1f0-49f30711ebe9",
+							"name": "Create collection for podcast",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.polymatic.media\",\n  \"warnings\":[],\n  \"description\":\"\",\n  \"type\":\"collection\",\n  \"custom\":\"show33\",\n  \"podcast\":\"polymaticast\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:44:36 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "179",
+							"body": "{\n    \"error\": \"api_error\",\n    \"message\": \"field custom contains a custom code that is not available\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create link in collection",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[],\n  \"description\":\"Your description goes here\",\n  \"collection\":\"show999\"\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/link",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"link"
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "a2ef8169-bf92-407a-8fab-de50864ffc2d",
+							"name": "Create link in collection",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[],\n  \"description\":\"Your description goes here\",\n  \"collection\":\"show999\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:44:50 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "177",
+							"body": "{\n    \"success\": true,\n    \"link\": {\n        \"shortCode\": \"l\",\n        \"hits\": 0,\n        \"warnings\": [],\n        \"options\": [],\n        \"description\": \"Your description goes here\",\n        \"collection\": \"show999\",\n        \"type\": \"link\",\n        \"link\": \"http:\\/\\/testo.local\\/l\",\n        \"url\": \"http:\\/\\/www.ognetworks.tv\",\n        \"detailLink\": \"http:\\/my\\/link\\/l\",\n        \"stats\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Reorder collection",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"order\":[\"l\",\"m\",\"n\",\"uniquecode___YOUR TITLE GOES HERE\",\"o\"]\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/collection/order/show999",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"collection",
+								"order",
+								"show999"
+							]
+						},
+						"description": "Send in the shortlinks in the order you prefer to reorder the list. You can also use separators like shown here by adding a unique code then three underscores ___ and then your title."
+					},
+					"response": [
+						{
+							"id": "04272dfa-6711-4294-be7e-74fcc08e7558",
+							"name": "reorder the collection",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"order\":[\"l\",\"m\",\"n\",\"uniquecode___YOUR TITLE GOES HERE\",\"o\"]\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/collection/order/show999",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"collection",
+										"order",
+										"show999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:46:38 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "212",
+							"body": "{\n    \"success\": true,\n    \"link\": {\n        \"shortCode\": \"k\",\n        \"hits\": 0,\n        \"warnings\": [],\n        \"options\": [],\n        \"description\": \"A collection for episode 999\",\n        \"realShortCode\": \"k\",\n        \"customCode\": \"show999\",\n        \"type\": \"collection\",\n        \"link\": \"http:\\/\\/testo.local\\/k\",\n        \"customLink\": \"http:\\/\\/testo.local\\/show999\",\n        \"url\": \"http:\\/\\/polymatic.media\\/podcast\",\n        \"detailLink\": \"http:\\/my\\/collection\\/k\",\n        \"links\": [\n            {\n                \"shortCode\": \"l\",\n                \"warnings\": [],\n                \"description\": \"Your description goes here\",\n                \"collection\": \"show999\",\n                \"type\": \"link\",\n                \"link\": \"http:\\/\\/testo.local\\/l\",\n                \"url\": \"http:\\/\\/www.ognetworks.tv\",\n                \"detailLink\": \"http:\\/my\\/link\\/l\"\n            },\n            {\n                \"shortCode\": \"m\",\n                \"warnings\": [],\n                \"description\": \"Your description goes here\",\n                \"collection\": \"show999\",\n                \"type\": \"link\",\n                \"link\": \"http:\\/\\/testo.local\\/m\",\n                \"url\": \"http:\\/\\/www.ognetworks.tv\",\n                \"detailLink\": \"http:\\/my\\/link\\/m\"\n            },\n            {\n                \"shortCode\": \"n\",\n                \"warnings\": [],\n                \"description\": \"Your description goes here\",\n                \"collection\": \"show999\",\n                \"type\": \"link\",\n                \"link\": \"http:\\/\\/testo.local\\/n\",\n                \"url\": \"http:\\/\\/www.ognetworks.tv\",\n                \"detailLink\": \"http:\\/my\\/link\\/n\"\n            },\n            {\n                \"shortCode\": \"o\",\n                \"warnings\": [],\n                \"description\": \"Your description goes here\",\n                \"collection\": \"show999\",\n                \"type\": \"link\",\n                \"link\": \"http:\\/\\/testo.local\\/o\",\n                \"url\": \"http:\\/\\/www.ognetworks.tv\",\n                \"detailLink\": \"http:\\/my\\/link\\/o\"\n            }\n        ],\n        \"stats\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get link info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/link/3",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"link",
+								"3"
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "52f7fa6b-2e35-4350-b159-8e28503ff5b4",
+							"name": "Get collection information",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "testkey"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"url\":\"http://www.ognetworks.tv\",\n\t\"warnings\":[\"nsfw\"],\n\t\"description\":\"So porny\"\n}"
+								},
+								"url": {
+									"raw": "http://www.testo.local/app_dev.php/api/link/polymatic30",
+									"protocol": "http",
+									"host": [
+										"www",
+										"testo",
+										"local"
+									],
+									"path": [
+										"app_dev.php",
+										"api",
+										"link",
+										"polymatic30"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1658",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Dec 2017 11:23:51 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.2.31 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.0.15 mod_ssl/2.2.31 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "e8ebb2",
+									"name": "X-Debug-Token",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.testo.local/app_dev.php/_profiler/e8ebb2",
+									"name": "X-Debug-Token-Link",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.15",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 493,
+							"body": "{\n    \"success\": true,\n    \"link\": {\n        \"shortCode\": \"polymatic30\",\n        \"warnings\": [\n            \"unsupported_protocol\"\n        ],\n        \"description\": \"Polymaticast 30\",\n        \"type\": \"collection\",\n        \"link\": \"\\/\\/testo.local\\/app_dev.php\\/polymatic30\",\n        \"links\": [\n            {\n                \"shortCode\": \"1\",\n                \"warnings\": [],\n                \"description\": \"\",\n                \"collection\": \"polymatic30\",\n                \"type\": \"link\",\n                \"link\": \"\\/\\/testo.local\\/app_dev.php\\/1\",\n                \"url\": \"http:\\/\\/qwerqwerqewrqwerwr\"\n            },\n            {\n                \"shortCode\": \"2\",\n                \"warnings\": [],\n                \"description\": \"\",\n                \"collection\": \"polymatic30\",\n                \"type\": \"link\",\n                \"link\": \"\\/\\/testo.local\\/app_dev.php\\/2\",\n                \"url\": \"http:\\/\\/wrqwerqwer\"\n            },\n            {\n                \"shortCode\": \"3\",\n                \"warnings\": [\n                    \"nsfw\"\n                ],\n                \"description\": \"bleep\",\n                \"collection\": \"polymatic30\",\n                \"type\": \"link\",\n                \"link\": \"\\/\\/testo.local\\/app_dev.php\\/3\",\n                \"url\": \"http:\\/\\/wrqwerqwer\"\n            },\n            {\n                \"shortCode\": \"otaku\",\n                \"warnings\": [],\n                \"description\": \"Brings all the otaku to the yard?\",\n                \"collection\": \"polymatic30\",\n                \"type\": \"link\",\n                \"link\": \"\\/\\/testo.local\\/app_dev.php\\/otaku\",\n                \"url\": \"http:\\/\\/www.ognetworks.tv\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"id": "68917746-65ad-46b3-b18e-26f2140cb68b",
+							"name": "Link that is part of a collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link/3",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:49:08 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": "The mime type of this content"
+								}
+							],
+							"cookie": [],
+							"responseTime": 179,
+							"body": "{\n    \"success\": true,\n    \"link\": {\n        \"shortCode\": \"3\",\n        \"hits\": 5,\n        \"warnings\": [],\n        \"options\": [],\n        \"description\": \"testje\",\n        \"collection\": \"show33\",\n        \"type\": \"link\",\n        \"link\": \"http:\\/\\/testo.local\\/3\",\n        \"url\": \"http:\\/\\/www.nu.nl\",\n        \"detailLink\": \"http:\\/my\\/link\\/3\",\n        \"stats\": {\n            \"ua\": {\n                \"device\": {\n                    \"desktop\": 5\n                },\n                \"osVer\": {\n                    \"Mac\\/10.13\": 5\n                },\n                \"clientVer\": {\n                    \"Chrome\\/64.0\": 4,\n                    \"Chrome\\/65.0\": 1\n                }\n            },\n            \"base\": {\n                \"referrer\": {\n                    \"http:\\/\\/testo.local\\/app_dev.php\\/show33\": 4\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get links",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/link?limit=10&order=created&orderDirection=DESC&page=0",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"link"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"equals": true
+								},
+								{
+									"key": "order",
+									"value": "created",
+									"equals": true
+								},
+								{
+									"key": "orderDirection",
+									"value": "DESC",
+									"equals": true
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "b96aef91-3e3c-4ddd-a705-c7bbe936ae5b",
+							"name": "List of links page 0 ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link?limit=10&order=created&orderDirection=DESC&page=0",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10",
+											"equals": true
+										},
+										{
+											"key": "order",
+											"value": "created",
+											"equals": true
+										},
+										{
+											"key": "orderDirection",
+											"value": "DESC",
+											"equals": true
+										},
+										{
+											"key": "page",
+											"value": "0",
+											"equals": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:49:47 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": "The mime type of this content"
+								}
+							],
+							"cookie": [],
+							"responseTime": 196,
+							"body": "{\n    \"total\": \"24\",\n    \"page\": 0,\n    \"totalPages\": 3,\n    \"limit\": 10,\n    \"startAt\": 0,\n    \"entities\": [\n        {\n            \"shortCode\": \"o\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"Your description goes here\",\n            \"collection\": \"show999\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/o\",\n            \"url\": \"http:\\/\\/www.ognetworks.tv\",\n            \"detailLink\": \"http:\\/my\\/link\\/o\"\n        },\n        {\n            \"shortCode\": \"m\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"Your description goes here\",\n            \"collection\": \"show999\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/m\",\n            \"url\": \"http:\\/\\/www.ognetworks.tv\",\n            \"detailLink\": \"http:\\/my\\/link\\/m\"\n        },\n        {\n            \"shortCode\": \"n\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"Your description goes here\",\n            \"collection\": \"show999\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/n\",\n            \"url\": \"http:\\/\\/www.ognetworks.tv\",\n            \"detailLink\": \"http:\\/my\\/link\\/n\"\n        },\n        {\n            \"shortCode\": \"l\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"Your description goes here\",\n            \"collection\": \"show999\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/l\",\n            \"url\": \"http:\\/\\/www.ognetworks.tv\",\n            \"detailLink\": \"http:\\/my\\/link\\/l\"\n        },\n        {\n            \"shortCode\": \"k\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"A collection for episode 999\",\n            \"realShortCode\": \"k\",\n            \"customCode\": \"show999\",\n            \"type\": \"collection\",\n            \"link\": \"http:\\/\\/testo.local\\/k\",\n            \"customLink\": \"http:\\/\\/testo.local\\/show999\",\n            \"url\": \"http:\\/\\/polymatic.media\\/podcast\",\n            \"detailLink\": \"http:\\/my\\/collection\\/k\"\n        },\n        {\n            \"shortCode\": \"j\",\n            \"hits\": 0,\n            \"warnings\": [\n                \"nsfw\"\n            ],\n            \"options\": [],\n            \"description\": \"Youtube totally nsfw\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/j\",\n            \"url\": \"http:\\/\\/www.youtube.com\",\n            \"detailLink\": \"http:\\/my\\/link\\/j\"\n        },\n        {\n            \"shortCode\": \"i\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"Full of nerds\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/i\",\n            \"url\": \"http:\\/\\/www.ognetworks.tv\",\n            \"detailLink\": \"http:\\/my\\/link\\/i\"\n        },\n        {\n            \"shortCode\": \"h\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/h\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/h\"\n        },\n        {\n            \"shortCode\": \"g\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/g\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/g\"\n        },\n        {\n            \"shortCode\": \"f\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/f\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/f\"\n        }\n    ]\n}"
+						},
+						{
+							"id": "857f8d93-d927-4b84-87c1-78a080078696",
+							"name": "Get links page 1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"disabled": false,
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link?limit=10&order=created&orderDirection=DESC&page=1",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10",
+											"equals": true
+										},
+										{
+											"key": "order",
+											"value": "created",
+											"equals": true
+										},
+										{
+											"key": "orderDirection",
+											"value": "DESC",
+											"equals": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"equals": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:50:15 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": "The mime type of this content"
+								}
+							],
+							"cookie": [],
+							"responseTime": 204,
+							"body": "{\n    \"total\": \"24\",\n    \"page\": 1,\n    \"totalPages\": 3,\n    \"limit\": 10,\n    \"startAt\": 10,\n    \"entities\": [\n        {\n            \"shortCode\": \"e\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/e\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/e\"\n        },\n        {\n            \"shortCode\": \"d\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/d\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/d\"\n        },\n        {\n            \"shortCode\": \"c\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/c\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/c\"\n        },\n        {\n            \"shortCode\": \"b\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/b\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/b\"\n        },\n        {\n            \"shortCode\": \"a\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/a\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/a\"\n        },\n        {\n            \"shortCode\": \"9\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/9\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/9\"\n        },\n        {\n            \"shortCode\": \"8\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/8\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/8\"\n        },\n        {\n            \"shortCode\": \"7\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/7\",\n            \"url\": \"http:\\/\\/www.johnbakker.name\",\n            \"detailLink\": \"http:\\/my\\/link\\/7\"\n        },\n        {\n            \"shortCode\": \"6\",\n            \"hits\": 16,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"Polymaticast Episode 33\",\n            \"realShortCode\": \"6\",\n            \"customCode\": \"show33\",\n            \"type\": \"collection\",\n            \"link\": \"http:\\/\\/testo.local\\/6\",\n            \"customLink\": \"http:\\/\\/testo.local\\/show33\",\n            \"url\": \"http:\\/\\/www.polymatic.media\",\n            \"detailLink\": \"http:\\/my\\/collection\\/6\"\n        },\n        {\n            \"shortCode\": \"5\",\n            \"hits\": 0,\n            \"warnings\": [],\n            \"options\": [],\n            \"description\": \"\",\n            \"type\": \"link\",\n            \"link\": \"http:\\/\\/testo.local\\/5\",\n            \"url\": \"http:\\/\\/herqwerqwerqwer\",\n            \"detailLink\": \"http:\\/my\\/link\\/5\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Rate",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/rate",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"rate"
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "6190b514-4e1e-4099-ac7c-bd6289c3ab6e",
+							"name": "How much you've used up",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "testkey",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/rate",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"rate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:39:08 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "154",
+							"body": "{\n    \"ok\": true,\n    \"limit\": 200,\n    \"used\": 0\n}"
+						},
+						{
+							"id": "29674fac-f792-4e4b-8e16-bbfde53aa729",
+							"name": "6 used",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/rate",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"rate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:50:56 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": "The mime type of this content"
+								}
+							],
+							"cookie": [],
+							"responseTime": 195,
+							"body": "{\n    \"ok\": true,\n    \"limit\": 200,\n    \"used\": 6\n}"
+						}
+					]
+				},
+				{
+					"name": "Get collection info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "YOUR SECURE TOKEN GOES HERE",
+								"description": "The token you have in your list of api keys"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+						},
+						"url": {
+							"raw": "https://www.testo.link/api/link/show999",
+							"host": [
+								"https://www.testo.link"
+							],
+							"path": [
+								"api",
+								"link",
+								"show999"
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "cea25f9b-85e8-440d-b4c0-3132079bbc4c",
+							"name": "An unknown link",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "testkey",
+										"disabled": false,
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link/polymaticast31",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link",
+										"polymaticast31"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 11:38:25 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "171",
+							"body": "{\n    \"success\": true,\n    \"link\": {\n        \"shortCode\": \"0\",\n        \"warnings\": [\n            \"unknown_link\",\n            \"anonymous\"\n        ],\n        \"description\": \"\",\n        \"type\": \"link\",\n        \"link\": \"http:\\/\\/testo.local\\/0\",\n        \"url\": \"http:\\/\\/www.testo.local\\/unknownLink\",\n        \"detailLink\": \"http:\\/my\\/link\\/0\",\n        \"stats\": []\n    }\n}"
+						},
+						{
+							"id": "04b3ba35-8a88-49b7-b15a-52ad78b1fa3f",
+							"name": "Get collection info",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "YOUR SECURE TOKEN GOES HERE",
+										"disabled": false,
+										"description": "The token you have in your list of api keys"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\":\"http://www.ognetworks.tv\",\n  \"warnings\":[\"nsfw\"],\n  \"description\":\"So porny\"\n}"
+								},
+								"url": {
+									"raw": "https://www.testo.link/api/link/show999",
+									"host": [
+										"https://www.testo.link"
+									],
+									"path": [
+										"api",
+										"link",
+										"show999"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Mar 2018 13:12:44 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "www.testo.local",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "cffa84",
+									"name": "X-Debug-Token",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.testo.local/app_dev.php/_profiler/cffa84",
+									"name": "X-Debug-Token-Link",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.26",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json",
+									"name": "content-type",
+									"description": "The mime type of this content"
+								}
+							],
+							"cookie": [],
+							"responseTime": 297,
+							"body": "{\n    \"success\": true,\n    \"link\": {\n        \"shortCode\": \"k\",\n        \"hits\": 0,\n        \"warnings\": [],\n        \"options\": [],\n        \"description\": \"A collection for episode 999\",\n        \"realShortCode\": \"k\",\n        \"customCode\": \"show999\",\n        \"type\": \"collection\",\n        \"link\": \"http:\\/\\/testo.local\\/app_dev.php\\/k\",\n        \"customLink\": \"http:\\/\\/testo.local\\/app_dev.php\\/show999\",\n        \"url\": \"http:\\/\\/polymatic.media\\/podcast\",\n        \"detailLink\": \"http:\\/app_dev.php\\/my\\/collection\\/k\",\n        \"order\": [\n            \"a\",\n            \"b\",\n            \"UNIQUEID__My description\",\n            \"c\"\n        ],\n        \"links\": [\n            {\n                \"shortCode\": \"l\",\n                \"warnings\": [],\n                \"description\": \"Your description goes here\",\n                \"collection\": \"show999\",\n                \"type\": \"link\",\n                \"link\": \"http:\\/\\/testo.local\\/app_dev.php\\/l\",\n                \"url\": \"http:\\/\\/www.ognetworks.tv\",\n                \"detailLink\": \"http:\\/app_dev.php\\/my\\/link\\/l\"\n            },\n            {\n                \"shortCode\": \"m\",\n                \"warnings\": [],\n                \"description\": \"Your description goes here\",\n                \"collection\": \"show999\",\n                \"type\": \"link\",\n                \"link\": \"http:\\/\\/testo.local\\/app_dev.php\\/m\",\n                \"url\": \"http:\\/\\/www.ognetworks.tv\",\n                \"detailLink\": \"http:\\/app_dev.php\\/my\\/link\\/m\"\n            },\n            {\n                \"shortCode\": \"n\",\n                \"warnings\": [],\n                \"description\": \"Your description goes here\",\n                \"collection\": \"show999\",\n                \"type\": \"link\",\n                \"link\": \"http:\\/\\/testo.local\\/app_dev.php\\/n\",\n                \"url\": \"http:\\/\\/www.ognetworks.tv\",\n                \"detailLink\": \"http:\\/app_dev.php\\/my\\/link\\/n\"\n            },\n            {\n                \"shortCode\": \"o\",\n                \"warnings\": [],\n                \"description\": \"Your description goes here\",\n                \"collection\": \"show999\",\n                \"type\": \"link\",\n                \"link\": \"http:\\/\\/testo.local\\/app_dev.php\\/o\",\n                \"url\": \"http:\\/\\/www.ognetworks.tv\",\n                \"detailLink\": \"http:\\/app_dev.php\\/my\\/link\\/o\"\n            }\n        ],\n        \"stats\": []\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
